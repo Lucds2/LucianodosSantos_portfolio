@@ -1,0 +1,209 @@
+/* ==========================================
+   ANIMAÇÃO E ESTILO DA BADGE DE STATUS
+   ========================================== */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(16, 185, 129, 0.06);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 6px 16px;
+  border-radius: 30px;
+  margin-bottom: 25px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  position: relative;
+}
+
+/* O efeito de pulso real usando animação do CSS */
+.status-dot::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #10b981;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: pulse-green 1.8s infinite ease-in-out;
+}
+
+.status-text {
+  font-size: 0.85rem !important;
+  color: #a7f3d0 !important;
+  margin: 0 !important;
+}
+
+.status-text strong {
+  color: #10b981;
+}
+
+/* Linhas que controlam a velocidade e o tamanho do pulso */
+@keyframes pulse-green {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+/* ==========================================
+   1. O CONTAINER PRINCIPAL (Mãe de tudo)
+   ========================================== */
+.hero-container {
+  width: 100%;
+  min-height: auto; /* Deixa a altura se ajustar ao conteúdo, evitando o vazio vertical */
+  background-color: #121212;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==========================================
+   2. A CAIXA CONTEÚDO 
+   ========================================== */
+.hero-content {
+  width: 100%;
+  max-width: 1200px; /* Limita a largura para o conteúdo não "esparramar" */
+  display: flex;
+  align-items: center; /* Alinha a foto verticalmente pelo centro do texto */
+  justify-content: space-between; /* Manda o texto para a extrema esquerda e a foto para a direita */
+  gap: 50px; /* Cria um espaço elegante de separação entre as duas colunas */
+}
+
+/* ==========================================
+   3. COLUNA DA ESQUERDA (Textos)
+   ========================================== */
+.hero-text-side {
+  flex: 1; /* Faz o bloco de texto ocupar todo o espaço útil restante da esquerda */
+  text-align: left; /* 👈 A MÁGICA: Alinha todo o seu texto para a esquerda, visual de Dev Sênior! */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Garante que badges e botões alinhem à esquerda */
+}
+
+/* ==========================================
+   4. COLUNA DA DIREITA (Foto)
+   ========================================== */
+.hero-image-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image-wrapper {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(100, 108, 255, 0.6); /* Ajuste com a cor do seu brilho */
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================
+   5. BOTÕES 
+   ========================================== */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: flex-start;
+}
+
+/* Estilização do bloco de texto "Sobre Mim" para ficar bem legível */
+.about-tag p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #cccccc;
+  margin-bottom: 15px;
+}
+
+/* CONTAINER DOS BOTÕES */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+  justify-content: flex-start;
+}
+
+/* ESTILO BASE PARA AMBOS OS BOTÕES */
+.hero-buttons button {
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* BOTÃO PRINCIPAL (Meus Projetos) - Roxo/Azul Sólido */
+.btn-primary {
+  background-color: #646cff;
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 15px rgba(100, 108, 255, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: #535bf2;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(100, 108, 255, 0.5);
+}
+
+/* BOTÃO SECUNDÁRIO (LinkedIn) - Transparente com Borda */
+.btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #646cff;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(100, 108, 255, 0.1);
+  border-color: #535bf2;
+  transform: translateY(-2px);
+}
+
+.hero-buttons a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* ==========================================
+   📱 RESPONSIVIDADE 
+   ========================================== */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-text-side {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+}

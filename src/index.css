@@ -1,0 +1,17 @@
+html {
+  scroll-behavior: smooth !important; /* Faz qualquer link de âncora deslizar suavemente */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Garante que paddings não estiquem a largura total */
+}
+
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden; /* Corta qualquer tentativa de criar barra de rolagem lateral */
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}

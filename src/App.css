@@ -1,0 +1,17 @@
+html {
+  scroll-behavior: smooth !important; /* Faz qualquer link de âncora deslizar suavemente */
+}
+
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: unset;
+}
+
+body {
+  margin: 0;
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}

@@ -1,0 +1,98 @@
+.projects-section {
+  
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.projects-section h2 span {
+  color: #646cff;
+}
+
+/* Grid Inteligente: distribui em 3 colunas, mas vira 1 coluna no celular */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* Estilização do Card estilo Dark Tech */
+.project-card {
+  background: #1e1e1e;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: left;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Efeito de levitação e brilho ao passar o mouse */
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: #646cff;
+  box-shadow: 0 12px 30px rgba(100, 108, 255, 0.15);
+}
+
+.project-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+/* Tag de Tecnologias */
+.tech-badge {
+  font-size: 0.8rem;
+  background-color: rgba(100, 108, 255, 0.1);
+  color: #646cff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  align-self: flex-start;
+  margin-bottom: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.project-card p {
+  color: #a0aec0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  flex-grow: 1; /* Garante que o link fique sempre alinhado na base */
+}
+
+.project-link {
+  color: #646cff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+  display: inline-block;
+}
+
+.project-link:hover {
+  color: #535bf2;
+}
+
+.project-image-container{
+  width: 100%;
+  height: 180px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  object-position: top;
+}
