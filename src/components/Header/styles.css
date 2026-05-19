@@ -81,7 +81,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Garante que fique na frente de tudo */
+  z-index: 10000; /* Garante que fique na frente de tudo */
 }
 
 /* O card da popup */
